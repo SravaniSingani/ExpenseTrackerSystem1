@@ -1,0 +1,28 @@
+﻿@model ExpenseTrackerSystem1.Models.ExpenseDto
+
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<h2>DeleteConfirm</h2>
+
+<nav>
+    <a href="/Expense/Details/@Model.ExpenseId">Cancel</a>
+</nav>
+
+<div>
+    <h4> Name: @Model.ExpenseName </h4>
+    <p> Category: @Model.Category </p>
+    <p> Amount: $@Model.Amount </p>
+    <p> Date: @Model.ExpenseDate </p>
+</div>
+
+<h4>Are you sure that you want to delete this expense?</h4>
+
+<div>
+    <form method="POST" action="/Expense/Delete/@Model.ExpenseId">
+        <button style=" display:block; margin: 0 auto; color:azure; background-color: darkred;">
+            Confirm Delete
+        </button>
+    </form>
+</div>

@@ -1,0 +1,20 @@
+﻿@model IEnumerable<ExpenseTrackerSystem1.Models.CardDto>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List of Cards</h2>
+
+<nav>
+    <a href="/Card/New">Add Expense</a>
+</nav>
+
+@foreach (ExpenseTrackerSystem1.Models.CardDto Card in Model)
+{
+    <div>
+        <h4><a href="/Card/Details/@Card.CardId"> Name: @Card.CardName</a> </h4>
+        <p> Type: @Card.CardType </p>
+
+    </div>
+}

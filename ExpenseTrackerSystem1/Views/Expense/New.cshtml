@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+<form action="/Expense/Create" method="POST">
+
+    <div>
+        <label>Name: </label><input type="text" name="ExpenseName" />
+    </div>
+    <div>
+        <label>Category: </label><input name="Category" />
+    </div>
+    <div>
+        <label>Amount: </label><input type="text" name="Amount" />
+    </div>
+    <div>
+        <label>Date: </label><input type="datetime-local" name="ExpenseDate" />
+    </div>
+    <div>
+        <label>Card: </label><input name="CardId" />
+    </div>
+    <div>
+        <input type="submit" value="Add Expense" />
+    </div>
+
+</form>
+

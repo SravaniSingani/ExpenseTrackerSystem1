@@ -1,0 +1,21 @@
+﻿@model ExpenseTrackerSystem1.Models.CardDto
+    
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Card Details</h2>
+<div>
+    <a href="/Card/List">Back</a>
+</div>
+
+<div>
+    <a href="/Card/Edit/@Model.CardId">Update</a>
+    <a href="/Card/DeleteConfirm/@Model.CardId">Delete</a>
+</div>
+
+
+<div>
+    <h4> Name: @Model.CardName </h4>
+    <p> Type: @Model.CardType </p>
+</div>

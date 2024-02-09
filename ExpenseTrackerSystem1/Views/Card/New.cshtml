@@ -1,0 +1,21 @@
+﻿@model IEnumerable<ExpenseTrackerSystem1.Models.CardDto>
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+<form action="/Card/Create" method="POST">
+
+    <div>
+        <label>Name: </label><input type="text" name="CardName" />
+    </div>
+    <div>
+        <label>Type: </label><input name="CardType" />
+    </div>
+    <div>
+        <input type="submit" value="Add Expense" />
+    </div>
+
+</form>
+

@@ -1,0 +1,24 @@
+﻿@model ExpenseTrackerSystem1.Models.CardDto
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Update</h2>
+<form action="@Url.Action("Update", "Card", new { id = Model.CardId })" method="POST">
+
+    @Html.HiddenFor(model => model.CardId)
+
+    <div>
+        <label>Name: </label><input type="text" name="CardName" value="@Model.CardName" />
+    </div>
+  
+    <div>
+        <label>CardType: </label><input type="text" name="CardType" value="@Model.CardType" />
+    </div>
+    <div>
+        <input type="submit" value="Update Card" />
+    </div>
+
+</form>
+

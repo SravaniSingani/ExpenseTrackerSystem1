@@ -1,0 +1,23 @@
+﻿@model ExpenseTrackerSystem1.Models.ExpenseDto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<div>
+    <a href="/Expense/List">Back</a>
+</div>
+
+<div>
+    <a href="/Expense/Edit/@Model.ExpenseId">Update</a>
+    <a href="/Expense/DeleteConfirm/@Model.ExpenseId">Delete</a>
+</div>
+
+
+    <div>
+        <h4> Name: @Model.ExpenseName </h4>
+        <p> Category: @Model.Category </p>
+        <p> Amount: $@Model.Amount </p>
+        <p> Date: @Model.ExpenseDate </p>
+    </div>

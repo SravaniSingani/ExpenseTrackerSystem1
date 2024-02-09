@@ -1,0 +1,32 @@
+﻿@model ExpenseTrackerSystem1.Models.ExpenseDto
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Update</h2>
+<form action="@Url.Action("Update", "Expense", new { id = Model.ExpenseId })" method="POST">
+
+    @Html.HiddenFor(model => model.ExpenseId)
+
+    <div>
+        <label>Name: </label><input type="text" name="ExpenseName" value="@Model.ExpenseName" />
+    </div>
+    <div>
+        <label>Category: </label><input name="Category" value="@Model.Category" />
+    </div>
+    <div>
+        <label>Amount: </label><input type="text" name="Amount" value="@Model.Amount" />
+    </div>
+    <div>
+        <label>Date: </label><input type="datetime-local" name="ExpenseDate" value=""@Model.ExpenseDate.ToString("yyyy-MM-ddTHH:mm")e" />
+    </div>
+    <div>
+        <label>Card: </label><input name="CardId" value="@Model.CardId"/>
+    </div>
+    <div>
+        <input type="submit" value="Update Expense" />
+    </div>
+
+</form>
+

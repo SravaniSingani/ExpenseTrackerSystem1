@@ -1,0 +1,8 @@
+{
+  "ExpenseId": 3,
+  "ExpenseName": "Vitamins",
+  "Category": "Health",
+  "Amount": 45.05,
+  "ExpenseDate": "2024-1-2",
+  "CardId": 2
+}
